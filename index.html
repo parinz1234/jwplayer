@@ -1,57 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link href="css/style.css" rel="stylesheet">-->
-  </head>
-  <body>
-    <div id="player">Loading the player...</div>
-    <button id="bumpit">📢</button>
-    <button id="playIt">play</button>
-    <button id="pauseIt">pause</button>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="main.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-fluid h-100">
 
-    <script src='jwplayer-7.11.3/jwplayer-7.11.3/jwplayer.js'></script>
-    <script>jwplayer.key='mYUFr9r5G8VjvP7ePte3mPhFVuEQ0EN/aS/stQ==';</script>
-    <script>
-      // Setup the player
-      const player = jwplayer('player').setup({
-        file: 'http://content.jwplatform.com/videos/SJnBN5W3-mjpS2Ylx.mp4',
-        volume: 10
-      });
+            <div class="row h-100">
+              <div class="col-12">
+                <h1 class="text-center">Header</h1>
+              </div>
 
-      // Listen to an event
-      player.on('pause', (event) => {
-        alert('Why did my user pause their video instead of watching it?');
-      });
+              <div class="col-6 video-card">
+                <div class="card bg-faded h-100">
+                  <!--<div class="card-block">-->
+                      <div class="row h-100 justify-content-center" style="padding: 1.25rem">
+                        <div class="col-7 align-self-center">
+                            <div id="player1">Loading the player...</div>
+                        </div>
+                        <div class="col-5 d-flex flex-column justify-content-around">
+                          <h2>Header</h2>
+                          <p>Description</p>
+                          <span>text</span>
+                        </div>
+                      </div>
+                  <!--</div>-->
+                </div>
+              </div>
+              <div class="col-6 video-card">
+                <div class="card bg-faded h-100">
+                  <!--<div class="card-block">-->
+                    <div class="row h-100 justify-content-center" style="padding: 1.25rem">
+                      <div class="col-7 align-self-center">
+                          <div id="player2">Loading the player...</div>
+                      </div>
+                      <div class="col-5 d-flex flex-column justify-content-around">
+                        <h2>Header</h2>
+                        <p>Description</p>
+                        <span>text</span>
+                      </div>
+                    </div>
+                  <!--</div>-->
+                </div>
+              </div>
+              <div class="col-6 video-card">
+                <div class="card bg-faded h-100">
+                  <!--<div class="card-block">
+                    This is some text within a card block.
+                  </div>-->
+                  <div class="row h-100 justify-content-center" style="padding: 1.25rem">
+                      <div class="col-7 align-self-center">
+                          <div id="player3">Loading the player...</div>
+                      </div>
+                      <div class="col-5 d-flex flex-column justify-content-around">
+                        <h2>Header</h2>
+                        <p>Description</p>
+                        <span>text</span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-6 video-card">
+                <div class="card bg-faded h-100">
+                  <!--<div class="card-block">
+                    This is some text within a card block.
+                  </div>-->
+                  <div class="row h-100 justify-content-center" style="padding: 1.25rem">
+                    <div class="col-7 align-self-center">
+                        <div id="player4">Loading the player...</div>
+                    </div>
+                    <div class="col-5 d-flex flex-column justify-content-around">
+                      <h2>Header</h2>
+                      <p>Description</p>
+                      <span>text</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
 
-      // player.on('all', (event) => {
-      //   console.log(event)
-      // })
+        <!--<div id="player">Loading the player...</div>
+        <button id="bumpit">📢</button>
+        <button id="playIt">play</button>
+        <button id="pauseIt">pause</button>-->
 
-      // Call the API
-      const bumpIt = () => {
-        const vol = player.getVolume();
-        player.setVolume(vol + 10);
-      }
 
-      const playIt = () => {
-        player.play((res) => {
-          console.log(res)
-        })
-      }
 
-      const pauseIt = () => {
-        player.pause((res) => {
-          console.log(res)
-        })
-      }
 
-      document.querySelector('#bumpit').onclick = () => { bumpIt(); }
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-      document.querySelector('#playIt').onclick = () => { playIt(); }
-      document.querySelector('#pauseIt').onclick = () => { pauseIt(); }
-    </script>
-  </body>
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        <script src='jwplayer-7.11.3/jwplayer-7.11.3/jwplayer.js'></script>
+        <script>jwplayer.key='mYUFr9r5G8VjvP7ePte3mPhFVuEQ0EN/aS/stQ==';</script>
+        <script>
+            // Setup the player
+            const player1 = jwplayer('player1').setup({
+              file: 'http://content.jwplatform.com/videos/SJnBN5W3-mjpS2Ylx.mp4',
+              width: "100%",
+              height: "100%",
+              aspectratio: "16:9",
+              autostart: true,
+              mute: true
+            });
+
+            const player2 = jwplayer('player2').setup({
+              file: 'http://content.jwplatform.com/videos/SJnBN5W3-mjpS2Ylx.mp4',
+              width: "100%",
+              height: "100%",
+              aspectratio: "16:9",
+              autostart: true,
+              mute: true
+            });
+
+            const player3 = jwplayer('player3').setup({
+              file: 'http://content.jwplatform.com/videos/SJnBN5W3-mjpS2Ylx.mp4',
+              width: "100%",
+              height: "100%",
+              aspectratio: "16:9",
+              autostart: true,
+              mute: true
+            });
+
+            const player4 = jwplayer('player4').setup({
+              file: 'http://content.jwplatform.com/videos/SJnBN5W3-mjpS2Ylx.mp4',
+              width: "100%",
+              height: "100%",
+              aspectratio: "16:9",
+              // volume: 10
+              autostart: true,
+              mute: true
+            });
+
+            // Listen to an event
+            // player.on('pause', (event) => {
+            //   alert('Why did my user pause their video instead of watching it?');
+            // });
+
+            // // player.on('all', (event) => {
+            // //   console.log(event)
+            // // })
+
+            // // Call the API
+            // const bumpIt = () => {
+            //   const vol = player.getVolume();
+            //   player.setVolume(vol + 10);
+            // }
+
+            // const playIt = () => {
+            //   player.play((res) => {
+            //     console.log(res)
+            //   })
+            // }
+
+            // const pauseIt = () => {
+            //   player.pause((res) => {
+            //     console.log(res)
+            //   })
+            // }
+
+            // document.querySelector('#bumpit').onclick = () => { bumpIt(); }
+
+            // document.querySelector('#playIt').onclick = () => { playIt(); }
+            // document.querySelector('#pauseIt').onclick = () => { pauseIt(); }
+        </script>
+    </body>
 </html>
